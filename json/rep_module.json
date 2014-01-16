@@ -1,0 +1,1076 @@
+{
+        "graphs": [
+        {
+                "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": " ",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Pre-call Planning", "Call Opening", "Agreed Action Feedback",
+					       "Key Message Delivery", "Objection Handling", "Expertise",
+					       "Listening","Call Closing","Post Call Analysis","Additional Metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        }
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+                                "width": 600,
+                                "height": 300,
+								"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "subtitle":
+                        {
+                                "text": " "
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "overAllCii":
+                {
+                        "chart":
+                        {
+                                "renderTo": "ciiDiv",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 500,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": " ",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Pre-call Planning", "Call Opening", "Agreed Action Feedback",
+					       "Key Message Delivery", "Objection Handling", "Expertise",
+					       "Listening","Call Closing","Post Call Analysis","Additional Metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        }
+                },
+                "obj1":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj1div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+               "obj2":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj2div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+               "obj3":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj3div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                 "obj4":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj4div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj5":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj5div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj6":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj6div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj7":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj7div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj8":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj8div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj9":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj9div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                },
+                "obj10":
+                {
+                        "chart":
+                        {
+                                "renderTo": "obj10div",
+                                "backgroundColor":"#f6f6f6",
+                                "type": "column",
+                                "width": 500,
+                                "height":300
+                        },                        
+                        "yAxis":
+                        {
+                       			"title": { "text": " " },                               
+                                "min": 0
+                        },                  
+            			             
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        }
+                        
+                }                
+                            
+                
+        }],
+        "pastGraphs": [
+        {
+                "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": " ",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Precall planning", "Call opening", "Agreed action feedback",
+					       "Key message delivery", "Objection handling", "Expertise",
+					       "Listening","Call closing","Post call analysis","Additional metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [10, 10,10, 10,10, 10,10, 10,10, 10],
+					"pointPlacement" : "on"					
+                                },
+                                {
+                                        "name": "Cii",
+                                        "data": [5, 4,1, 8, 2, 8,2, 8,2,2],
+					"pointPlacement" : "on"
+					
+                                }
+                        ]
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+               "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": "Interaction metrics",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Precall planning", "Call opening", "Agreed action feedback",
+					       "Key message delivery", "Objection handling", "Expertise",
+					       "Listening","Call closing","Post call analysis","Additional metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data":  [10, 10,10, 10,10, 10,10, 10,10, 10],
+					"pointPlacement" : "on"					
+                                },
+                                {
+                                        "name": "Cii",
+                                        "data": [5, 4,1, 8, 2, 8,2, 8,2,2],
+					"pointPlacement" : "on"
+					
+                                }
+                        ]
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+               "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": "Interaction metrics",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Precall planning", "Call opening", "Agreed action feedback",
+					       "Key message delivery", "Objection handling", "Expertise",
+					       "Listening","Call closing","Post call analysis","Additional metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [10, 10,10, 10,10, 10,10, 10,10, 10],
+					"pointPlacement" : "on"					
+                                },
+                                {
+                                        "name": "Cii",
+                                        "data": [2, 4,1, 8, 2, 8,2, 8,2,2],
+					"pointPlacement" : "on"
+					
+                                }
+                        ]
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": "Interaction metrics",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Precall planning", "Call opening", "Agreed action feedback",
+					       "Key message delivery", "Objection handling", "Expertise",
+					       "Listening","Call closing","Post call analysis","Additional metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data":  [10, 10,10, 10,10, 10,10, 10,10, 10],
+					"pointPlacement" : "on"					
+                                },
+                                {
+                                        "name": "Cii",
+                                        "data": [5, 4,1, 8, 2, 8,2, 8,2,2],
+					"pointPlacement" : "on"
+					
+                                }
+                        ]
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                }                
+                
+        },
+	{
+               "spider":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 90,
+                                "marginBottom": 35,
+				"width": 470,
+				"polar" : true				
+                        },
+                        "title":
+                        {
+                                "text": "Interaction metrics",
+                                "x": -20
+                        },
+                        "pane":
+                        {
+                                "size": "80%"
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Precall planning", "Call opening", "Agreed action feedback",
+					       "Key message delivery", "Objection handling", "Expertise",
+					       "Listening","Call closing","Post call analysis","Additional metrics"
+					       ],
+				"tickmarkPlacement" : "on",
+				"lineWidth" : 0
+                        },
+                        "yAxis":
+                        {
+                                "gridLineInterpolation": "polygon",
+                                "min": 0,
+				"plotLines": [{
+				    "value": 0,
+				    "width": 1,
+				    "color": "#808080"
+				}]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 0,
+                                "y": 160,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+			    "shared" : true,
+			    "valuePrefix" : ""
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [10, 10,10, 10,10, 10,10, 10,10, 10],
+					"pointPlacement" : "on"					
+                                },
+                                {
+                                        "name": "Cii",
+                                        "data": [5, 4,4, 5, 4, 3,4, 5,6,7],
+					"pointPlacement" : "on"
+					
+                                }
+                        ]
+                },
+                 "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                }                
+                
+        }	
+        ]
+}
