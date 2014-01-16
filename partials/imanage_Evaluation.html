@@ -1,0 +1,451 @@
+<div ng-controller="evaluationController" id="base-frame" >
+	<header>
+		<h1 class="home" ><a ng-click="homeBtn();">iManage</a></h1>
+		<div class="module_name" >
+			<span>Pending Evaluation Visits</span>
+		</div>
+		<div class="user-info" ><img src="{{theme}}images/user_icon.png" />
+			<span>Welcome <span>Steve</span></span>
+			</br> <span><a ng-click="logOut();">Log Out </a></span>
+		</div>
+	</header>
+	<div  id="ev-item-wrapper" class="content-frame evaluation-item-list" ng-style="getStyleEvalItem()" ng-iscroll ng-iscroll-delay='50'>
+		<ul>
+			<li ng-repeat="eval in tempRide.evaluations">
+				<div ng-class="getClassSingleTabbar(eval)" ng-click="handleEvalItemClick(eval)" ng-style="getStyleEvalList(eval)">
+					<div id="singleTabbar1">
+						<div class="tabimg"><img src="{{theme}}images/clock_icon.png"/>
+						</div>
+						<div class="tabtxt">
+							{{tempRide.startTime}}
+						</div>
+						<div><img class="divimg"/><!--src="images/divider1.png"-->
+						</div>
+					</div>
+					<div id="singleTabbar2">
+						<div class="tabimg"><img src="{{currentRep.imageUrl}}"/>
+						</div>
+						<div  id="rep_name">
+							<div class="rep_name_first">
+								{{currentRep.name}}
+							</div>
+							<div class="rep_name_last">
+								Gladius/Lyperxa
+							</div>
+						</div>
+						<div class="divimg"><img  src="{{theme}}images/divider1.png"/>
+						</div>
+					</div>
+					<div id="singleTabbar3">
+						<div class="tabtxt">
+							<div>
+								Doctors&nbsp;<span>({{getSelectedDoctorsCount(eval)}})</span>
+							</div>
+							<div>
+								Drugs&nbsp;<span>({{getSelectedDrugsCount(eval)}})</span>
+							</div>
+							<div>
+								Visits&nbsp;<span>({{getSelectedVisitsCount(eval)}})</span>
+							</div>
+							<div style="font-size:20px;">&nbsp;&nbsp;&nbsp;
+								CII&nbsp;<span>({{getSelectedCIICount(eval)}})</span>
+							</div>							
+						</div>
+						<div class="divimg"><img  src="{{theme}}images/divider1.png"/>
+						</div>
+					</div>
+					<div id="singleTabbar4">
+						<div ng-class="getClassAddNewButton(eval)" ng-click="addNewBar()"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="evaluation-objs-and-categories">
+		<div class="imanageNavigation" ng-style="getStyleImanageNavigation()">
+			<!--getRideObjListClass(rideObj)-->
+			<div>
+				Objectives
+			</div>
+			<ul>
+				<li ng-repeat="rideObj in evaluation.rideObjs" ng-click="clickObjItem(rideObj);" ng-class="itemClass(rideObj)" >
+					{{rideObj.name}}
+				</li>
+			</ul>
+		</div>
+		<div class="imanageContent" ng-style="getStyleImanageContent()" >
+			<div class="imanageContent-header">
+				<div class="ic-header1">
+					<span>Doctors :</span>
+					<div class="parent parent1" custid="1">
+						<div class="title">
+							<input type="" readonly value="{{getSelectedDoctors(evaluation)}}"/>
+						</div>
+						<div class="main">
+							<div ng-repeat="doctor in evaluation.doctors">
+								<label>
+									<input type="checkbox" value="{{doctor.name}}" ng-checked="doctor.selected"  ng-model="doctor.selected"/>
+									<span> Dr. {{doctor.name}}</span></label>
+							</div>
+						</div>
+					</div>
+					<div style="width:20px;margin-left:75px;padding-top:15px;"><img src="orange/images/arrow.png"></div>
+				</div>
+				<div class="ic-header2">
+					<span>Drugs :</span>
+					<div class="parent parent2" custid="2">
+						<div class="title">
+							<input type="" readonly value="{{getSelectedDrugs(evaluation)}}"/>
+						</div>
+						<div class="main">
+							<div ng-repeat="drug in evaluation.drugs">
+								<label>
+									<input type="checkbox" value="{{drug.name}}" ng-checked="drug.selected"  ng-model="drug.selected"/>
+									<span>{{drug.name}}</span></label>
+							</div>
+						</div>
+					</div>
+					<div style="width:20px;margin-left:40px;padding-top:15px;"><img src="orange/images/arrow.png"></div>
+				</div>
+				<div class="ic-header3">
+					<span>Visit :</span>
+					<div class="parent parent3" custid="3">
+						<div class="title">
+							<input type="" readonly value="{{getSelectedVisits(evaluation)}}"/>
+						</div>
+						<div class="main">
+							<div ng-repeat="visit in evaluation.visits">
+								<label>
+									<input type="checkbox" value="{{visit.time}}" ng-checked="visit.selected"  ng-model="visit.selected"/>
+									<span>{{visit.time}}</span></label>
+							</div>
+						</div>
+					</div>
+					
+				<div style="width:20px;margin-left:40px;padding-top:15px;"><img src="orange/images/arrow.png"></div>
+				</div>
+			</div>
+			<div class="imanageContent-Index">
+				<span id="imanageContent-Index-span1"> 
+					<!--<span id="imanageContent-Index-span1-1">{{headingCurrObjective}} Index</span>-->
+				 <img ng-click="showObjvKeyPopup();" src="orange/images/Keyfindings_button.png" class="keyFindBtn" id="keyFindBtn" />
+				 <span id="imanageContent-Index-span1-2">
+						<input type="text" readonly ng-model="selectedRideObj.ciiIndex" />
+						&nbsp;of
+						&nbsp;
+						<input type="text" readonly ng-model="selectedRideObj.weightage"/>
+					</span> </span>
+				<span id="imanageContent-Index-span2"> <span>CII</span> <span>
+						<input type="num" readonly value="{{cumulativeCiiToDisplay}}"/>
+					</span> </span>
+			</div>
+			<div class="categories-div" id="cat-wrapper" ng-style="getStyleCategoriesDiv()" ng-iscroll ng-iscroll-delay='50' style="height:415px;">
+				<ul>
+					<li ng-repeat="category in selectedRideObj.categories" >
+						<div class="sliderTab">
+							<div class="slidertabText" >
+								{{category.name}}
+							</div>
+							
+							
+							<div class="slider-range" id="slider-range{{$index}}" slider-range-directive  index="{{$index}}">
+								<img src="{{theme}}images/slider.png" />	
+								<div id="slider{{$index}}"></div>
+								
+							</div>							
+							
+							<div class="slidertabweight">
+								Weightage :<span>{{category.weightage}}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			
+			</div>
+			
+			<div class="imanageContent-footer">
+				
+				<div id="defSliderCont" style="width:350px;float:left;height:10px;margin-top:-10px;" slider-range-directive index="100" ng-show="ObjTickVal"  >
+					<img src="{{theme}}images/slider.png" />	
+					<div id="slider" style="margin-top:0px;"></div>
+							
+				</div>
+				
+
+				<div>
+					<span ng-click="saveBtn();" id="Call_Planning_save"></span>			
+					<span ng-click="cancelBtn();" id="Call_Planning_cancel"></span>					
+					<span ng-click="showOverallPopup();" ng-class="getClassSubmitButton()"></span>	
+					<span ng-click="NextBtn();" id="Call_Planning_next"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div submit-popup id="evaluation-popup" >
+		<div class="lb-overlay" ></div>
+		<div class="lb"    style="height: 100px;" >
+			<div class="lb-content">
+				<h2>Do you really want to submit ? </h2>	
+				<table class="grid">
+					<tbody>
+						<tr>
+							<td><img src="{{theme}}images/yes.png" ng-click="submitBtn();" /></td>
+							<td><img src="{{theme}}images/no.png" ng-click="hidePopup();" />	</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div objve-keyfind-popup id="object-key-popup" >
+		<div class="lb-overlay-key" ></div>
+		<div class="lb-key" >
+			<div class="lb-content-key">
+				<h2>Key Findings</h2>	
+				<h1>{{ ObjctName }}</h1>
+				<textarea id="ObjtKeyFindTextArea"> {{ ObjctKeyFind }}</textarea>		
+				<div class="actionBtns" >
+					<img src="{{theme}}images/cancel_button.png" ng-click="hideObjvKeyPopup();" />
+					<img src="{{theme}}images/save_button.png" ng-click="saveObjvKeyFind();" />	
+				</div>
+			</div>
+		</div>
+	</div>
+<div overall-popup id="overall-popup" >
+		<div class="lb-overlay-overall" ></div>
+		<div class="lb-overall" >
+			<div class="lb-content-overall">
+					
+				<h2>Overall Key Findings</h2>
+				<textarea id="overallTextArea"> {{ overallText }}</textarea>	
+				<h2>Suggested Actions</h2>					
+				<textarea id="SugstActTextArea"> {{ SugstActText }}</textarea>	
+				<div class="actionBtns">
+					<img src="{{theme}}images/cancel_button.png" ng-click="hideOverallPopup();" />
+					<img src="{{theme}}images/next_button.png" ng-click="showPreview();" />	
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div evaluation-preview id="evaluation-preview" >
+		<div class="lb-overlay-ep" ></div>
+		<div class="lb-ep" >
+			<div class="lb-content-ep">
+				<!--<h2>Evaluation Preview</h2>-->							
+					<div class="eptitle1" >Assessment Report</div> <div class="eptitle2">Type: Final Report</div>
+					<div class="epclear"></div>
+					<div class="eptextBox">
+						<div style="width:48%;float:left;">
+							<div class="epTextRow"><label>Name:</label> {{ epRepName }} </div>
+							<div class="epTextRow"><label>Cii:</label> {{ evalCii }} <label>YTD:</label> 85%</div>
+							<div class="epTextRow"><label>Team:</label> Cardiovascular Taskforce</div>
+							<div class="epTextRow"><label>Territory:</label> Stony Brook NY 1</div>
+							<div class="epTextRow"><label>Territory ID:</label> A007654</div>
+							<div class="epTextRow"><label>District Manager:</label> Robert Brown</div>
+						</div>
+						<div style="width:48%;float:right;">
+							<div class="epTextRow"><label>Date:</label> {{ submitDate }}</div>
+							<div class="epTextRow"><label>Ride-along:</label>  1st Session 2nd Session Both</div>
+							<div class="epTextRow"><label>Focused products(s):</label> {{ drugsString }}</div>
+							<div class="epTextRow"><label>Speciality:</label>  Physicians</div>
+							<div class="epTextRow"><label>Key Measures considered:</label> {{ selectedObjString }}
+								</div>
+							
+						</div>
+						<div class="epclear"></div>
+					</div>
+					
+					<h2>Analyze CII </h2>
+					<div  id="ciiDiv" class="epCharts"></div>				
+					<epciispiderchart ciiVal='{{evalCii}}' value='{{overlSpiderChart}}' type="area"  class="epCharts">	</epciispiderchart>	
+					<div class="epbox" >
+    						<h5>Overall Key Findings</h5>
+    						<ul>
+       							 <li>{{ overlkf }}</li>
+        					</ul>
+    
+				   </div>
+				   
+				
+					<div  ng-class="getClassEpBox('1')" > 
+						<h2>Pre-Call Planning Index: {{ obj1Index }} </h2>					
+						<div  id="obj1div" class="epCharts"></div>				
+						<epchartfirstcat value='{{firstCategoryChart}}' type="area"  class="epCharts">	</epchartfirstcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj1kf }} </li>
+        					</ul>
+						</div>
+					</div>
+				
+					
+					<div  ng-class="getClassEpBox('2')" > 
+						<h2>Call Opening: {{ obj2Index }} </h2>					
+						<div  id="obj2div" class="epCharts"></div>				
+						<epchartsecondcat value='{{secondCategoryChart}}' type="area"  class="epCharts">	</epchartsecondcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj2kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('3')" > 
+						<h2>Agreed Action Feedback: {{ obj3Index }} </h2>					
+						<div  id="obj3div" class="epCharts"></div>				
+						<epchartthirdcat value='{{thirdCategoryChart}}' type="area"  class="epCharts">	</epchartthirdcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj3kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('4')" > 
+						<h2>Key Message Delivery: {{ obj4Index }} </h2>					
+						<div  id="obj4div" class="epCharts"></div>				
+						<epchartfourthcat value='{{fourthCategoryChart}}' type="area"  class="epCharts">	</epchartfourthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj4kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('5')" > 
+						<h2>Objection Handling: {{ obj5Index }} </h2>					
+						<div  id="obj5div" class="epCharts"></div>				
+						<epchartfifthcat value='{{fifthCategoryChart}}' type="area"  class="epCharts">	</epchartfifthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj5kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('6')" > 
+						<h2>Expertise: {{ obj6Index }} </h2>					
+						<div  id="obj6div" class="epCharts"></div>				
+						<epchartsixthcat value='{{sixthCategoryChart}}' type="area"  class="epCharts">	</epchartsixthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj6kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					<div  ng-class="getClassEpBox('7')" > 
+						<h2>Listening: {{ obj7Index }} </h2>					
+						<div  id="obj7div" class="epCharts"></div>				
+						<epchartseventhcat value='{{seventhCategoryChart}}' type="area"  class="epCharts">	</epchartseventhcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj7kf }} </li>
+        					</ul>
+						</div>
+					</div>
+						<div  ng-class="getClassEpBox('8')" > 
+							<h2>Call Closing: {{ obj8Index }} </h2>							
+							<div  id="obj8div" class="epCharts"></div>				
+							<epcharteighthcat value='{{eighthCategoryChart}}' type="area"  class="epCharts">	</epcharteighthcat>
+							<div class="epbox" >
+							<h5>Key Findings</h5>
+							<ul>
+								 <li>{{ obj8kf }} </li>
+							</ul>    
+							</div>
+						</div>
+					
+						<div  ng-class="getClassEpBox('9')" > 
+							<h2>Post Call Analysis: {{ obj9Index }} </h2>
+							<div  id="obj9div" class="epCharts"></div>				
+							<epchartninethcat value='{{ninethCategoryChart}}' type="area"  class="epCharts">	</epchartninethcat>	
+							<div class="epbox" >
+							<h5>Key Findings</h5>
+							<ul>
+								<li> {{ obj9kf }} </li>
+							</ul>
+							</div>
+						</div>
+					
+						<div  ng-class="getClassEpBox('10')" > 
+							<h2>Additional Metrics: {{ obj10Index }} </h2>
+							<div  id="obj10div" class="epCharts"></div>				
+							<epcharttenthcat value='{{tenthCategoryChart}}' type="area"  class="epCharts">	</epcharttenthcat>	
+							<div class="epbox">
+							<h5>Key Findings</h5>
+							<ul>
+       							 <li>{{ obj10kf }} </li>
+							</ul>    
+							</div>
+						</div>
+						
+				   	<div class="epbox" id="keyBox" >
+    						<h5>Suggested Actions</h5>
+    						<ul>
+       							 <li> {{ epSA }} </li>
+        					</ul>
+    
+				   </div>
+					
+						
+					
+					
+			</div>
+			<div class="epBtns">
+					<img src="{{theme}}images/back_button.png" ng-click="hidePreviewPopOver();" />
+					<img src="{{theme}}images/saveforlater_button.png" ng-click="saveForLater();" />	
+					<img src="{{theme}}images/submit_button.png" ng-click="submitAll();" />	
+					</div>	
+		</div>
+	</div> 
+
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$(".title").click(function() {
+			$(this).siblings(".main").toggle();
+		});
+		
+		$("body").click(function(e) {
+			if($(e.target).closest(".parent").size() == 0) {
+				$(".main").hide();
+			}
+		});
+		
+		$("input").click(function(e) {
+			
+			$(".main").hide();
+		});
+		
+		
+		$(".main input").on('change', function() {
+			var checkedString = "";
+			var id = $(this).closest('.parent').attr("custid");
+			var targ = $(".parent[custid='" + id + "'] .title input");
+			$(targ).val(checkedString);
+			//var id =  $(this).closest('.parent').attr("custid")
+			$(".parent[custid='" + id + "'] .main input:checked").each(function() {
+				if(checkedString != "")
+					checkedString = checkedString + " , ";
+				checkedString = checkedString + $(this).parent().text();
+				$(targ).val(checkedString);
+			});
+			if(checkedString == "")
+				$(targ).val("All");
+		});
+		//$('#sliderTab1 .slider-range select').slider('refresh');
+	});
+
+  
+
+</script>
