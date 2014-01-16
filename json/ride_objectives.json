@@ -1,0 +1,402 @@
+{
+    "rideObjs": [
+        {
+            "name": "Pre-call Planning",
+            "id": 1,
+            "index": 0,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 10,
+            "categories": [
+                {
+                    "name": "Defined,specific,relevantcall objective(s)",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Tailored appropriate materials for call objective(s)",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Prepared with relevant formulary and co-pay info",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Analyzed prescribing patterns (vs. predicted)",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Practiced responses to anticipated questions",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 30
+                }
+            ]
+        },
+        {
+            "name": "Call Opening",
+            "id": 2,
+            "index": 1,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 5,
+            "categories": [
+                {
+                    "name": "Shared call objective(s)",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Introduced manager",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Gained customer’s time commitment",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": " Referenced previous discussion(s)",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Used open-ended questions to create dialogue",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 20
+                }
+            ]
+        },
+        {
+            "name": "Agreed Action Feedback",
+            "id": 3,
+            "index": 2,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 5,
+            "categories": [
+                {
+                    "name": "Restated previous agreed actions benefits",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 40
+                },
+                {
+                    "name": "Reviewed status of previous agreed actions",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Stated your next steps",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Re-negotiated customer’s agreed next steps",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 20
+                }
+            ]
+        },
+        {
+            "name": "Key Message Delivery",
+            "id": 4,
+            "index": 3,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 10,
+            "categories": [
+                {
+                    "name": "Delivered on-strategy brand message(s)",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Tailored benefits to customer’s stated needs",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Offered formulary and co-pay information",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Shared support programs’ & resources’ benefits",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Solicited customer feedback and questions",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 10
+                }
+            ]
+        },
+        {
+            "name": "Objection Handling",
+            "id": 5,
+            "index": 4,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 20,
+            "categories": [
+                {
+                    "name": "Restated customer question/objection",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Asked clarifying questions",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Empathized re: any unmet need(s)",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Offered appropriate, correct information",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Utilized appropriate support materials",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 10
+                }
+            ]
+        },
+        {
+            "name": "Expertise",
+            "id": 6,
+            "index": 5,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 20,
+            "categories": [
+                {
+                    "name": "Demonstrated product expertise",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Demonstrated therapeutic category expertise",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Demonstrated disease state expertise",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Demonstrated account expertise",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Demonstrated product access expertise",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 20
+                }
+            ]
+        },
+        {
+            "name": "Listening",
+            "id": 7,
+            "index": 6,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 5,
+            "categories": [
+                {
+                    "name": "Paraphrased customer statements",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Clarified customer statements",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Let customer speak (did not interrupt) ",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Sought customer knowledge or direction",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 30
+                }
+            ]
+        },
+        {
+            "name": "Call Closing",
+            "id": 8,
+            "index": 7,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 10,
+            "categories": [
+                {
+                    "name": "Reiterate points of agreement ",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Stated your next steps",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Negotiated customer’s agreed next steps",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Set expectations regarding next visit",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Expressed thanks",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 10
+                }
+            ]
+        },
+        {
+            "name": "Post Call Analysis",
+            "id": 9,
+            "index": 8,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 10,
+            "categories": [
+                {
+                    "name": "Captured observables – what was seen & heard",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Created a prediction re:customer Rx response",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Updated account plan with new learnings",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Recorded new needs for future calls",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Defined appropriate next call objective(s)",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 10
+                }
+            ]
+        },
+        {
+            "name": "Additional Metrics",
+            "id": 10,
+            "index": 9,
+            "defaultRating": 3,
+            "ciiIndex": 0,
+            "keyFinding":"",
+            "weightage": 5,
+            "categories": [
+                {
+                    "name": "Engaged administrative and medical staff",
+                    "id": 1,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Used appropriate gestures and body language",
+                    "id": 2,
+                    "rating": 0,
+                    "weightage": 20
+                },
+                {
+                    "name": "Display of promotional Compliance",
+                    "id": 3,
+                    "rating": 0,
+                    "weightage": 10
+                },
+                {
+                    "name": "Response to change or suggestions",
+                    "id": 4,
+                    "rating": 0,
+                    "weightage": 30
+                },
+                {
+                    "name": "Shared learnings with partners and colleagues",
+                    "id": 5,
+                    "rating": 0,
+                    "weightage": 20
+                }
+            ]
+        }
+    ]
+}
