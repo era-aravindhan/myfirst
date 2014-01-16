@@ -1,0 +1,95 @@
+<div ng-controller="dashboardController" id="base-frame" >
+	<div id="dashboard-content">
+		<header>
+			<h1><a >iManage</a></h1>
+			<div class="user-info" ><img src="{{theme}}images/user_icon.png" /><span>Welcome <span>Steve</span></span>
+				</br> <span><a ng-click="logOut();">Log Out </a></span>
+			</div>
+		</header>
+		<div class="content-frame" >
+			<div class="country-map" >
+				<ul>
+					<li ng-repeat="rep in repsList" >
+						<a class="map-marker" style="left: {{rep.positionX}}px;top:{{rep.positionY}}px" >
+						<div ng-click="toolTip(rep);" class="map-marker-tooltip" >
+							<div class="wrapper" >
+								<span class="image" > <img src="{{rep.imageUrl}}" /> </span>
+								<span class="info" > <strong>{{rep.name}}</strong> <label>CII - {{rep.cii}}</label> <label>Sales YTD - {{rep.ytdPercent}}%</label> </span>
+							</div>
+						</div> </a>
+					</li>
+				</ul>
+			        <img src="{{theme}}images/map.png" />
+			</div>
+			<div class="home-bottom-container" >
+				<div class="ride-along-col" >
+					<div class="wrapper" >
+						<h2>Ride-Alongs</h2>
+						<div class="table-scroller" >
+							<table cellpadding="0" cellspacing="0" class="table-style" >
+								<tbody>
+									<tr ng-repeat="plannedRide in filteredRides" ng-click="handlePlannedItemClick(plannedRide)">
+										<td><font>{{getColumnTextRepName(plannedRide)}}</font><br/><br/>{{plannedRide.startTime}}</td>
+										<td><img src="{{theme}}images/calendar_icon.png"/>{{getScheduleTextStatus(plannedRide)}}</td>
+										<td><img src="{{theme}}images/evaluation_icon.png"/>{{getColumnTextStatus(plannedRide)}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="report-col" >
+					<div class="wrapper" >
+						<h2>Reports</h2>
+						<a ng-click="moreReports();" class="more" ></a>
+						<div class="chart-placer" id="report-chart-placer" ></div>
+						<chart value='{{basicAreaChart}}' type="area" class="chart-placer" ></chart>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div planned-ride-along-popup id="dashboard-popup">
+		<div class="lb-overlay" ></div>
+		<div class="lb" >
+			<div class="lb-content" >
+				<h2>Ride-along Objective</h2>
+				<table class="boxes" >
+					
+					<tr ng-repeat="rideObjsOneRow in popupRideObjsToDisplay">
+				         <td ng-repeat="rideObj in rideObjsOneRow">
+							{{rideObj.name}}
+				        </td>
+				     </tr>
+					
+					
+				</table>
+				<h2>Visits</h2>
+				<table class="grid" >
+					<tbody>
+						<tr>
+							<td>Dr. Issac</td>
+							<td>Cholecap</td>
+							<td>Cardiology</td>
+						</tr>
+						<tr>
+							<td>Dr. Ashly</td>
+							<td>Lyprexa</td>
+							<td>Cardiology</td>
+						</tr>
+						<tr>
+							<td>Dr. Rehman</td>
+							<td>Laperant</td>
+							<td>Pediatrics</td>
+						</tr>
+						<tr>
+							<td>Dr. Peter George</td>
+							<td>Abacav</td>
+							<td>Urology</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
