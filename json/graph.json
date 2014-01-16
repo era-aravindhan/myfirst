@@ -1,0 +1,2100 @@
+{
+        "graphs": [
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII  Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 97.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CII",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "CII Trend Analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Customer Interaction Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                       "name": "Steve Smith",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 69.2, 65.7, 64.5, 71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 65.6, 17.7, 53.5, 61.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 75.6, 37.7, 63.5, 71.9, 65.2, 28.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CII Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "CII Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "RCO",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 67.0]
+                                },
+                                {
+                                        "name": "OEACO",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 67.0]
+                                },
+                                {
+                                        "name": "UCE",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 67.0]
+                                },
+                                {
+                                        "name": "UPP",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 67.0]
+                                }
+                        ]
+                }
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CP Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Pre-call Planning" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "CP",
+                                        "data": [73.6, 57.8, 31.5, 73.4, 72.0, 45.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "CP Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Pre-call Planning" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 34.2, 29.7, 18.3, 29.8, 85.2, 60.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [63.9, 64.2, 65.7, 64.5, 71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 75.6, 77.7, 63.5, 71.9, 65.2, 78.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "Pre-call Planning Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "CP Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "RCO",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 37.0]
+                                },
+                                {
+                                        "name": "OEACO",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 60.0]
+                                },
+                                {
+                                        "name": "UCE",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 56.0]
+                                },
+                                {
+                                        "name": "UPP",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 54.5, 99.0]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CO Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Call Opening" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 97.5, 99.4, 87.2, 94.0, 97.0]
+                                },
+                                {
+                                        "name": "CO",
+                                        "data": [13.6, 87.8, 9.5, 83.4, 36.0, 94.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "CO Trend Analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Call Opening" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [68.5, 70.5, 68.25, 64.9, 69.7, 68.15,70.4]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [58.0, 66.9, 69.5, 74.5, 68.2, 75.5, 74.5]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 75.6, 77.7, 63.5, 71.9, 65.2, 78.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CO Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "CO Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "CC",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 57.0]
+                                },
+                                {
+                                        "name": "ACO",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 65.0]
+                                },
+                                {
+                                        "name": "RBL",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 63.0]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "AAF Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Agreed Action Feedback" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 87.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "AAF",
+                                        "data": [83.6, 77.8, 91.5, 63.4, 76.0, 64.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "AAF Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Agreed Action Feedback" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [62.9, 25.6, 97.97, 5.9, 60.9, 85.2, 8.0]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 64.2, 65.7, 64.5, 71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [12.6, 95.6, 87.7, 50.5, 91.9, 15.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "AAF Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "AAF Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "ACE",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 74.0, 67.0, 37.0]
+                                },
+                                {
+                                        "name": "CCAA",
+                                        "data": [83.6, 77.8, 31.5, 93.4, 76.0, 84.5, 87.0]
+                                },
+                                {
+                                        "name": "CAAO",
+                                        "data": [89.9, 67.5, 59.4, 87.2, 84.0, 67.0, 45.9]
+                                },
+                                {
+                                        "name": "ATP",
+                                        "data": [83.6, 77.8, 91.5, 63.4, 76.0, 84.5, 56.7]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "OH Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Objection Handling" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "OH",
+                                        "data": [58.0, 66.9, 69.5, 74.5, 68.2, 35.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "OH Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Objection Handling" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [62.9, 65.6, 57.7, 53.5, 61.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 64.2, 65.7, 64.5, 71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [62.9, 75.6, 45.8, 63.5, 71.9, 75.2, 8.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "OH Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "OH Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "SAA",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 46.0]
+                                },
+                                {
+                                        "name": "PQUI",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 78.9]
+                                },
+                                {
+                                        "name": "DOE",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 89.3]
+                                },
+                                {
+                                        "name": "PAC",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 78.9]
+                                },
+                                {
+                                        "name": "NCD",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 56.9]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "Expertise Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Expertise" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "EBA",
+                                        "data": [62.9, 65.6, 57.7, 53.5, 61.9, 65.0]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "Expertise Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Expertise" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [79.9, 71.5, 76.4, 79.2, 74.0, 76.0,70.9]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 64.2, 65.7, 64.5, 23.38, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [42.9, 75.6, 77.7, 63.5, 71.9, 65.2, 78.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [96.9, 77.6, 73.5, 18.4, 83.5, 7.0, 78.6]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "Expertise Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Expertise Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "horizontal",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "left",
+                                "verticalAlign": "bottom",
+                                "x": 0,
+                                "y": 20,
+                                "floating": true,
+                                "borderWidth": 0,
+                                "shadow": false
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "EI",
+                                        "data": [89.9, 97.8, 99.4, 97.2, 94.0, 97.0, 98.5]
+                                },
+                                {
+                                        "name": "PE",
+                                        "data": [53.6, 67.8, 61.5, 63.4, 76.0, 44.5, 78.9]
+                                },
+                                {
+                                        "name": "DE",
+                                        "data": [59.9, 67.5, 70.4, 57.2, 48.0, 67.0, 23.9]
+                                },
+                                {
+                                        "name": "MCE",
+                                        "data": [84.6, 37.8, 51.5, 53.4, 76.0, 84.5, 56.9]
+                                },
+                                {
+                                        "name": "CE",
+                                        "data": [29.9, 67.5, 79.4, 47.2, 74.0, 67.0, 34.9]
+                                },
+                                {
+                                        "name": "SE",
+                                        "data": [33.6, 37.8, 61.5, 67.4, 26.0, 34.5, 77.9]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "KMD Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Key Message Delivery" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 100,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 77.5, 99.4, 87.2, 94.0, 87.0]
+                                },
+                                {
+                                        "name": "KMD",
+                                        "data": [79.9, 71.5, 76.4, 79.2, 74.0, 76.0]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "KMD Trend Analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Key Message Delivery" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [6.9, 77.6, 73.5, 78.4, 83.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [68.5, 70.5, 68.25, 64.9, 69.7, 68.15,7.4]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 65.6, 97.7, 53.5, 61.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [58.0, 66.9, 29.6, 74.5, 38.2, 75.5, 64.5]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "KMD Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "KMD Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "CEKM",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 69.9]
+                                },
+                                {
+                                        "name": "DWC",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 47.0]
+                                },
+                                {
+                                        "name": "RMRC",
+                                        "data": [89.9, 67.5, 90.4, 77.2, 64.0, 67.0, 87.0]
+                                },
+                                {
+                                        "name": "CTM",
+                                        "data": [83.6, 77.8, 91.5, 83.4, 96.0, 84.5, 97.0]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "Listening Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Listening" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 87.0]
+                                },
+                                {
+                                        "name": "LBA",
+                                        "data": [71.6, 27.8, 11.5, 9.4, 86.0, 84.2]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "Listening Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Listening" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [76.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [9.9, 11.5, 66.4, 99.2, 74.0, 6.0, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 65.6, 57.7, 53.5, 61.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [68.5, 70.5, 68.25, 64.9, 69.7, 68.15,70.4]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "Listening Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Listening Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Empathy",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 44.0]
+                                },
+                                {
+                                        "name": "Understanding",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 88.0]
+                                },
+                                {
+                                        "name": "RAC",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 78.0]
+                                },
+                                {
+                                        "name": "CTM",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 89.0]
+                                },
+                                {
+                                        "name": "CD",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 67.0]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CC Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Call Closing" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "CC",
+                                        "data": [9.9, 11.5, 66.4, 79.2, 74.0, 6.0]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "CC Trend Analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Call Closing" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [76.9, 67.6, 73.5, 78.4, 7.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9, 64.2, 65.7, 64.5, 79.9, 75.2, 61.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 65.6, 57.7, 53.5, 21.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 75.6, 57.7, 63.5, 71.9, 65.2, 98.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "CC Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "CC Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "RPA",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 87.0]
+                                },
+                                {
+                                        "name": "RMD",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 97.0]
+                                },
+                                {
+                                        "name": "TA",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 63.0]
+                                },
+                                {
+                                        "name": "SPNV",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 69.0]
+                                }
+                        ]
+                }                
+                
+        },
+        {
+                "column":
+                {
+                        "chart":
+                        {
+                                "renderTo": "container",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "PCA Benchmark Analysis"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "John","Steve","Peter","Thomas","Jonathan","George"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Post Call Analysis" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Benchmark",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0]
+                                },
+                                {
+                                        "name": "PCA",
+                                        "data": [8.6, 27.8, 91.5, 53.4, 76.0, 54.5]
+                                }
+                        ]
+                },
+                "line":
+                {
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 130,
+                                "marginBottom": 25
+                        },
+                        "title":
+                        {
+                                "text": "PCA Trend analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Sep'12","Oct'12","Nov'12","Dec'12","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "Post Call Analysis" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 100,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "District benchmark",
+                                        "data": [90.0, 85.0, 86.0, 90.0, 85.0, 88.0, 82.0]
+                                },
+                                {
+                                        "name": "Region benchmark",
+                                        "data": [90.0, 83.0, 85.0, 83.0, 89.0, 86.0, 88.0]
+                                },
+                                {
+                                        "name": "National benchmark",
+                                        "data": [90.0, 87.0, 88.0, 86.0, 88.0, 87.0, 86.0]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [26.9, 77.6, 73.5, 78.4, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [83.9, 64.2, 65.7, 64.5, 71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 5.6, 57.7, 58.5, 61.9, 75.2, 98.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 75.6, 7.7, 63.5, 31.9, 95.2, 78.0]
+                                }
+                        ]
+                },
+                "multiBar":
+                {
+                        "chart":
+                        {
+                                "renderTo": "multiBar",
+                                "backgroundColor":"white",
+                                "type": "column",
+				"marginRight": 130,
+                                "marginBottom": 50
+                        },
+                        "title":
+                        {
+                                "text": "PCA Index: Parameter Comparison"
+                        },
+                        "subtitle":
+                        {
+                                "text": ""
+                        },
+                        "xAxis":
+                        {
+                                "categories": ["Area", "Terr.1:<br/>John","Terr.2:<br/>Steve","Terr.3:<br/>Peter","Terr.4:<br/>Thomas","Terr.5:<br/>Jonathan","Terr.6:<br/>George"]
+                                
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "PCA Index" },
+                                "min": 0,
+                                "max": 100
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "backgroundColor": "#FFFFFF",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": -10,
+                                "y": 150,
+                                "floating": true,
+                                "shadow": true
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "plotOptions":
+                        {
+                                "column": {
+                                    "pointPadding": 0.01,
+                                    "borderWidth": 0
+                                }
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "PVDC",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 57.0]
+                                },
+                                {
+                                        "name": "ARFC",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 78.0]
+                                },
+                                {
+                                        "name": "KLU",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 34.9]
+                                },
+                                {
+                                        "name": "IIN",
+                                        "data": [83.6, 77.8, 91.5, 93.4, 76.0, 84.5, 78.0]
+                                },
+                                {
+                                        "name": "ADNCP",
+                                        "data": [89.9, 67.5, 99.4, 87.2, 94.0, 67.0, 76.0]
+                                }
+                        ]
+                }                
+                
+        }
+        ]
+}
