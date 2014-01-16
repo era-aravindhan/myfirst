@@ -1,0 +1,40 @@
+{
+    "drugs": [
+        {
+            "name": "Cholecap",
+            "id": 1
+        },
+        {
+            "name": "Lyprexa",
+            "id": 2
+        },
+        {
+            "name": "Laperant",
+            "id": 3
+        },
+        {
+            "name": "Abacav",
+            "id": 4
+        },
+        {
+            "name": "Acyclovir",
+            "id": 5
+        },
+        {
+            "name": "Pralnta",
+            "id": 6
+        },
+        {
+            "name": "Nelfvir",
+            "id": 7
+        },
+        {
+            "name": "Peniclovir",
+            "id": 8
+        },
+        {
+            "name": "Rhydoca",
+            "id": 9
+        }
+    ]
+}
