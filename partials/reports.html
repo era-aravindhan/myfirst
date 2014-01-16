@@ -1,0 +1,43 @@
+		<div ng-controller="reportsController" id="base-frame">
+			
+			<header>
+				<h1 class="home" ><a ng-click="homeBtn();">iManage</a></h1>
+				<div class="module_name" >
+					<span>Reports</span>
+				</div>
+				<div class="user-info" ><img src="{{theme}}images/user_icon.png" /><span>Welcome <span>Steve</span></span>
+					</br>
+					<span><a ng-click="logOut();">Log Out </a></span>
+				</div>
+			</header>
+			
+			<div class="content-frame" >
+				
+			<div class="home-bottom-container" >
+<div class="reportDropdownHeader">
+	<div style="font-size: large; color: white; width:50%;float:left">{{parameterName}}</div>
+	<div style="width:50%;float:right">
+		<select ng-model="objective" ng-options="o.name for o in objectives"  ng-change="clickObjItem(objective);" class="graphType" id="graphType" style="width:200px; margin-left:250px;" >
+							      </select>
+	</div>
+
+</div>	
+
+<!--<select  style=" background-image: url('images/horizontal_strip'); margin-left:725px;opacity:0.5;" ></select>	
+			-->
+			<div  style="max-height: 650px;overflow-y:scroll;overflow-x:none;padding:1px 0 0 0;-webkit-overflow-scrolling: touch;">
+					<div  id="report-chart-placer" style="margin-left: 50px;width:850px;"></div>
+					<div id="container" style="margin-left: 50px;width:850px;margin-top: 10px;" ></div>
+					<div  id="multiBar" style="margin-left: 50px;width:850px;margin-top: 10px;"></div>
+					
+					<chart value='{{basicAreaChart}}' type="area" style="margin-left: 50px;width:850px;">	</chart>
+					<chart2 value='{{basicAreaChart2}}' type="area" style="margin-left: 50px;width:850px;margin-top: 10px;">	</chart2>
+					<chart value='{{basicAreaChart3}}' type="area" style="margin-left: 50px;width:850px;margin-top: 10px;">	</chart>
+
+			</div>					
+				</div>
+				
+			</div>			
+			
+		</div>
+		
