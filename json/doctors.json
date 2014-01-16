@@ -1,0 +1,44 @@
+{
+    "doctors": [
+        {
+            "name": "Edward Stuart",
+            "id": 1,
+            "speciality": "GP"
+        },
+        {
+            "name": "Bruce Willison",
+            "id": 2,
+            "speciality": "Endo"
+        },
+        {
+            "name": "Emila Watts",
+            "id": 3,
+            "speciality": "Physician"
+        },
+        {
+            "name": "Veronica Cusak",
+            "id": 4,
+            "speciality": "Endo"
+        },
+        {
+            "name": "Willis Spacy",
+            "id": 5,
+            "speciality": "Ortho"
+        },
+        {
+            "name": "Issac Riyas",
+            "id": 6,
+            "speciality": "Pediatrician"
+        },
+        {
+            "name": "Peter George",
+            "id": 7,
+            "speciality": "Endo"
+        },
+        {
+            "name": "Ashley John",
+            "id": 8,
+            "speciality": "Ortho"
+        }
+    ]
+}
