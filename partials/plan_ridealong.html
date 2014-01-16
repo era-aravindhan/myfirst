@@ -1,0 +1,146 @@
+		<div ng-controller="planRideController" id="base-frame" >
+			<header>
+				<h1 class="back" ><a ng-click="backBtn();">Rep Module</a></h1>
+				<div class="module_name" >
+					<span>Calendar Module</span>
+				</div>
+				<div class="user-info" ><img src="{{theme}}images/user_icon.png" /><span>Welcome <span>Steve</span></span>
+					</br>
+					<span><a ng-click="logOut();">Log Out </a></span>
+				</div>
+			</header>
+			<div class="content-frame" >
+				<div class="tab-bar-frame">
+					<div class="swiper-container swiper-tabs">
+						<ul class="swiper-wrapper tabbar">
+					      <li class="swiper-slide" ng-repeat="rep in repsList"  ng-click="handleRepClick(rep,$index);">
+								<a ng-class="getRepListItemClass(rep)"> <span class="pic"><img src="{{rep.imageUrl}}" /></span> <span class="info"> <label>{{rep.name}}</label> <label>CII: {{rep.cii}} YTD: {{rep.ytdPercent}}%</label> <label>Drugs: Acyclovir,Pralnta</label> </span> </a>
+						  </li>
+						</ul>
+					</div>
+					<div class="tab-bar-frame-content">
+						<div id='calendar' caledar-module></div>
+						<div class='plan-ride-container'>
+							<div class='plan-ride-time-and-objective'>
+								<div class='sub-heading'>
+									<label class='sub-heading'>Select Time</label>
+								</div>
+								<div class='time-values-container'>
+									<span class="start-time-span"> <label class="non-strong">Start Time</label> </br><strong id="start-time">{{startTimeStr}}</strong> </span>
+									<span class="end-time-span"> <label class="non-strong">End Time</label> </br><strong id="end-time">{{endTimeStr}}</strong> </span>
+								</div>
+								<div class="slider-range" slider-range-calendar>
+									<select name="valueA" id="id1">
+										<option timeVal="08:00 AM" value="8">8am</option>
+										<option timeVal="08:30 AM" value="8:30">8:30am</option>
+										<option timeVal="09:00 AM" value="9" >9am</option>
+										<option timeVal="09:30 AM" value="9:30">9:30am</option>
+										<option timeVal="10:00 AM" value="10">10am</option>
+										<option timeVal="10:30 AM" value="10:30">10:30am</option>
+										<option timeVal="11:00 AM" value="11">11am</option>
+										<option timeVal="11:30 AM" value="11:30" selected="selected">11:30am</option>
+										<option timeVal="12:00 PM" value="12">12pm</option>
+										<option timeVal="12:30 PM" value="12:30">12:30pm</option>
+										<option timeVal="01:00 PM" value="1">1pm</option>
+										<option timeVal="01:30 PM" value="1:30">1:30pm</option>
+										<option timeVal="02:00 PM" value="2">2pm</option>
+										<option timeVal="02:30 PM" value="2:30">2:30pm</option>
+										<option timeVal="03:00 PM" value="3">3pm</option>
+										<option timeVal="03:30 PM" value="3:30">3:30pm</option>
+										<option timeVal="04:00 PM" value="4">4pm</option>
+										<option timeVal="04:30 PM" value="4:30">4:30pm</option>
+										<option timeVal="05:00 PM" value="5">5pm</option>
+										<option timeVal="05:30 PM" value="5:30">5:30pm</option>
+										<option timeVal="06:00 PM" value="6">6pm</option>
+										<option timeVal="06:30 PM" value="6:30">6:30pm</option>
+										<option timeVal="07:00 PM" value="7">7pm</option>
+									</select>
+									<select name="valueB" id="id2">
+										<option timeVal="08:00 AM" value="8">8am</option>
+										<option timeVal="08:30 AM" value="8:30">8:30am</option>
+										<option timeVal="09:00 AM" value="9" >9am</option>
+										<option timeVal="09:30 AM" value="9:30">9:30am</option>
+										<option timeVal="10:00 AM" value="10">10am</option>
+										<option timeVal="10:30 AM" value="10:30">10:30am</option>
+										<option timeVal="11:00 AM" value="11">11am</option>
+										<option timeVal="11:30 AM" value="11:30">11:30am</option>
+										<option timeVal="12:00 PM" value="12">12pm</option>
+										<option timeVal="12:30 PM" value="12:30">12:30pm</option>
+										<option timeVal="01:00 PM" value="1">1pm</option>
+										<option timeVal="01:30 PM" value="1:30">1:30pm</option>
+										<option timeVal="02:00 PM" value="2">2pm</option>
+										<option timeVal="02:30 PM" value="2:30">2:30pm</option>
+										<option timeVal="03:00 PM" value="3"  selected="selected">3pm</option>
+										<option timeVal="03:30 PM" value="3:30">3:30pm</option>
+										<option timeVal="04:00 PM" value="4">4pm</option>
+										<option timeVal="04:30 PM" value="4:30">4:30pm</option>
+										<option timeVal="05:00 PM" value="5">5pm</option>
+										<option timeVal="05:30 PM" value="5:30">5:30pm</option>
+										<option timeVal="06:00 PM" value="6">6pm</option>
+										<option timeVal="06:30 PM" value="6:30">6:30pm</option>
+										<option timeVal="07:00 PM" value="7">7pm</option>
+									</select>
+								</div>
+								<div class='sub-heading'>
+									<label class='sub-heading'>Ride Along Objective</label>
+								</div>
+								<div class="container-table-ride" >
+									
+									<table cellpadding="5" cellspacing="5" class="table-ride-objective-style" >
+										<tbody>
+										<tr ng-repeat="rideObjsOneRow in rideObjsToDisplay">
+									         <td ng-repeat="rideObj in rideObjsOneRow">
+												<input type="checkbox" value="{{rideObj.name}}" ng-checked="rideObj.selected"  ng-model="rideObj.selected">
+												<label>{{rideObj.name}}</label></td>
+									        </td>
+									     </tr>
+										</tbody>
+									</table>
+									
+								</div>
+								<div class='button-bar'>
+									<button class="btn-ride-cancel" ></button>
+									<button class="btn-ride-done"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				
+				
+					setTimeout(function($scope) {
+						
+
+						$('.swiper-tabs').swiper({
+							slidesPerSlide : 4
+						});
+
+						var tabBars = $(".tab-bar-frame").find("ul.tabbar li a");
+						tabBars.click(function() {
+							tabBars.removeClass("active");
+							$(this).addClass("active");
+						});
+						var innerTabbar = $(".tab-bar-frame-content").find("ul.inner-tabbar li a");
+						var innerTabContent = $(".tab-bar-frame-content .inner-tabbar-content");
+						innerTabbar.click(function() {
+							innerTabbar.removeClass("active");
+							$(this).addClass("active");
+							var index = $(this).parent().index();
+							innerTabContent.hide();
+							$(innerTabContent[index]).show();
+						});
+
+						//$(tabBars[0]).click();
+						$(innerTabbar[0]).click();
+					},50);
+
+				
+				
+
+			});
+
+		</script>
