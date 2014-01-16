@@ -1,0 +1,280 @@
+		<div ng-controller="repModuleController" id="base-frame" >
+			<header>
+				<h1 class="home" ><a ng-click="homeBtn();">iManage</a></h1>
+				<div class="module_name" >
+					<span>My Team</span>
+				</div>
+				<div class="user-info" ><img src="{{theme}}images/user_icon.png" />
+					<span>Welcome <span>Steve</span></span> </br>
+					<span><a ng-click="logOut();">Log Out </a></span>
+				</div>
+			</header>
+			<div class="content-frame" >
+				<div class="tab-bar-frame">
+					<div class="swiper-container swiper-tabs">
+					    <ul class="swiper-wrapper tabbar">
+					      <li class="swiper-slide" ng-repeat="rep in repsList"  ng-click="handleRepClick(rep,$index);">
+								<a ng-class="getRepListItemClass(rep)"> <span class="pic"><img src="{{rep.imageUrl}}" /></span>
+								<span class="info"> <label>{{rep.name}}</label>
+								<label>CII: {{rep.cii}} YTD: {{rep.ytdPercent}}%</label>
+								<label>Drugs: Acyclovir,Pralnta</label>
+								<!--<label>Doctors: {{rep.EvaluatedDocNames}}</label>-->
+								</span> </a>
+						  </li>
+					    </ul>
+					</div>	
+
+					<div class="tab-bar-frame-content">
+						<ul class="inner-tabbar">
+							<li>
+								<a class="analyze-cii"></a>
+							</li>
+							<li>
+								<a class="improvement-plan"></a>
+							</li>
+				
+						</ul>
+
+						<button ng-click="goToPlanRidePage();" class="btn-plan-a-ride" ></button>
+						<div class="inner-tabbar-content" >
+							<select ng-model="objective" ng-options="o.name for o in objectives"  ng-change="clickObjItem(objective);" style="width:200px; margin-left:750px;margin-top:10px;">
+
+					 </select>
+							<div class="rep-chart-main" >
+								<div id="container" class="container" ></div>
+								<repobjspider value='{{mainSpider}}' type="area">	</repobjspider>
+
+							</div>
+						</div>
+						<div class="inner-tabbar-content" >
+							<div class="rep-improvement-plan-content" >								
+									
+								<h2>Overall Key Findings</h2>
+									<textarea id="overallTextArea"> {{ OverlKeyFind }}</textarea>
+								<h2>Suggested Actions</h2>					
+									<textarea id="SugstActTextArea"> {{ SuggstAct }}</textarea>
+									
+							<img  ng-show="showReportBtn" src="orange/images/view_report_button.png" ng-click="saveOKF()" />
+							<img  ng-show="showSaveBtn" src="orange/images/saveandsubmit_button.png" ng-click="saveOKF()" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+				<div cii-graph-popup id="graph-popup" >
+		<div class="lb-overlay-ciiGraph" ></div>
+		<div class="lb-ciiGraph" >
+			<div class="lb-content-ciiGraph">
+				<h2>{{ category }}</h2>							
+				<div>
+					<img class="closeBtn" src="{{theme}}images/close_button.png" ng-click="hideGraphPopup()" />	
+					<div  id="report-chart-placer" class="popChart"></div>				
+					<popovrchart value='{{barPopupChart}}' type="area">	</popovrchart>
+					<h2>Key Findings</h2>	
+					<div  id="ovrlKeyFindingsText">{{ KeyFindObjPopover }}</div>	
+				</div>
+			</div>
+		</div>
+	</div> 
+		<div evaluation-preview id="evaluation-preview" >
+		<div class="lb-overlay-ep" ></div>
+		<div class="lb-ep" >
+			<div class="lb-content-ep">
+				<!--<h2>Evaluation Preview</h2>-->							
+					<div class="eptitle1" >Assessment Report</div> <div class="eptitle2">Type: Final Report</div>
+					<div class="epclear"></div>
+					<div class="eptextBox">
+						<div style="width:48%;float:left;">
+							<div class="epTextRow"><label>Name:</label> {{ epRepName }} </div>
+							<div class="epTextRow"><label>Cii:</label> {{ evalCii }} <label>YTD:</label> 85%</div>
+							<div class="epTextRow"><label>Team:</label> Cardiovascular Taskforce</div>
+							<div class="epTextRow"><label>Territory:</label> Stony Brook NY 1</div>
+							<div class="epTextRow"><label>Territory ID:</label> A007654</div>
+							<div class="epTextRow"><label>District Manager:</label>Steve</div>
+						</div>
+						<div style="width:48%;float:right;">
+							<div class="epTextRow"><label>Date:</label> {{ submitDate }}</div>
+							<div class="epTextRow"><label>Ride-along:</label>  1st Session 2nd Session Both</div>
+							<div class="epTextRow"><label>Focused products(s):</label> {{ drugsString }}</div>
+							<div class="epTextRow"><label>Speciality:</label>  Physicians</div>
+							<div class="epTextRow"><label>Key Measures considered:</label> {{ selectedObjString }}
+								</div>
+							
+						</div>
+						<div class="epclear"></div>
+					</div>
+					
+					
+								
+					<h2>Analyze CII</h2>
+					<div  id="ciiDiv" class="epCharts"></div>				
+					<epciispiderchart ciiVal='{{evalCii}}' value='{{overlSpiderChart}}' type="area"  class="epCharts">	</epciispiderchart>	
+					<div class="epbox">
+    						<h5>Overall Key Findings</h5>
+    						<ul>
+       							 <li>{{ overlkf }}</li>
+        					</ul>
+    
+				    </div>
+				   
+					<div  ng-class="getClassEpBox('1')" > 
+						<h2>Pre-Call Planning Index: {{ obj1Index }} </h2>					
+						<div  id="obj1div" class="epCharts"></div>				
+						<epchartfirstcat value='{{firstCategoryChart}}' type="area"  class="epCharts">	</epchartfirstcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj1kf }} </li>
+        					</ul>
+						</div>
+					</div>
+				
+					
+					<div  ng-class="getClassEpBox('2')" > 
+						<h2>Call Opening: {{ obj2Index }} </h2>					
+						<div  id="obj2div" class="epCharts"></div>				
+						<epchartsecondcat value='{{secondCategoryChart}}' type="area"  class="epCharts">	</epchartsecondcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj2kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('3')" > 
+						<h2>Agreed Action Feedback: {{ obj3Index }} </h2>					
+						<div  id="obj3div" class="epCharts"></div>				
+						<epchartthirdcat value='{{thirdCategoryChart}}' type="area"  class="epCharts">	</epchartthirdcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj3kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('4')" > 
+						<h2>Key Message Delivery: {{ obj4Index }} </h2>					
+						<div  id="obj4div" class="epCharts"></div>				
+						<epchartfourthcat value='{{fourthCategoryChart}}' type="area"  class="epCharts">	</epchartfourthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj4kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('5')" > 
+						<h2>Objection Handling: {{ obj5Index }} </h2>					
+						<div  id="obj5div" class="epCharts"></div>				
+						<epchartfifthcat value='{{fifthCategoryChart}}' type="area"  class="epCharts">	</epchartfifthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj5kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					
+					<div  ng-class="getClassEpBox('6')" > 
+						<h2>Expertise: {{ obj6Index }} </h2>					
+						<div  id="obj6div" class="epCharts"></div>				
+						<epchartsixthcat value='{{sixthCategoryChart}}' type="area"  class="epCharts">	</epchartsixthcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj6kf }} </li>
+        					</ul>
+						</div>
+					</div>
+					<div  ng-class="getClassEpBox('7')" > 
+						<h2>Listening: {{ obj7Index }} </h2>					
+						<div  id="obj7div" class="epCharts"></div>				
+						<epchartseventhcat value='{{seventhCategoryChart}}' type="area"  class="epCharts">	</epchartseventhcat>
+						<div class="epbox" >
+						<h5>Key Findings</h5>
+    						<ul>
+       							 <li> {{ obj7kf }} </li>
+        					</ul>
+						</div>
+					</div>
+						<div  ng-class="getClassEpBox('8')" > 
+							<h2>Call Closing: {{ obj8Index }} </h2>							
+							<div  id="obj8div" class="epCharts"></div>				
+							<epcharteighthcat value='{{eighthCategoryChart}}' type="area"  class="epCharts">	</epcharteighthcat>
+							<div class="epbox" >
+							<h5>Key Findings</h5>
+							<ul>
+								 <li>{{ obj8kf }} </li>
+							</ul>    
+							</div>
+						</div>
+					
+						<div  ng-class="getClassEpBox('9')" > 
+							<h2>Post Call Analysis: {{ obj9Index }} </h2>
+							<div  id="obj9div" class="epCharts"></div>				
+							<epchartninethcat value='{{ninethCategoryChart}}' type="area"  class="epCharts">	</epchartninethcat>	
+							<div class="epbox" >
+							<h5>Key Findings</h5>
+							<ul>
+								<li> {{ obj9kf }} </li>
+							</ul>
+							</div>
+						</div>
+					
+						<div  ng-class="getClassEpBox('10')" > 
+							<h2>Additional Metrics: {{ obj10Index }} </h2>
+							<div  id="obj10div" class="epCharts"></div>				
+							<epcharttenthcat value='{{tenthCategoryChart}}' type="area"  class="epCharts">	</epcharttenthcat>	
+							<div class="epbox">
+							<h5>Key Findings</h5>
+							<ul>
+       							 <li>{{ obj10kf }} </li>
+							</ul>    
+							</div>
+						</div>
+				   	<div class="epbox">
+    						<h5>Suggested Actions</h5>
+    						<ul>
+       							 <li> {{ epSA }} </li>
+        					</ul>
+    
+				   </div>
+			</div>
+		</div>
+	</div> 
+		</div>
+		<script>
+		
+			$(function() {
+				//Carousel mode:
+
+					setTimeout(function() {
+
+						$('.swiper-tabs').swiper({
+							slidesPerSlide : 4
+						});
+
+						var tabBars = $(".tab-bar-frame").find("ul.tabbar li a");
+						tabBars.click(function() {
+							tabBars.removeClass("active");
+							$(this).addClass("active");
+						});
+						var innerTabbar = $(".tab-bar-frame-content").find("ul.inner-tabbar li a");
+						var innerTabContent = $(".tab-bar-frame-content .inner-tabbar-content");
+						innerTabbar.click(function() {
+							innerTabbar.removeClass("active");
+							$(this).addClass("active");
+							var index = $(this).parent().index();
+							innerTabContent.hide();
+							$(innerTabContent[index]).show();
+						});
+
+						//$(tabBars[0]).click();
+						$(innerTabbar[0]).click();
+					},10);
+					});
+		</script>
