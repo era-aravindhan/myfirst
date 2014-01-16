@@ -1,0 +1,77 @@
+{
+
+                        "chart":
+                        {
+                                "renderTo": "report-chart-placer",
+                                "backgroundColor":"white",
+                                "type": "line",
+				"marginRight": 100,
+                                "marginBottom": 35,
+				"height": 230,
+				"min":0,
+				"max":100
+                        },
+                        "title": 
+                        {
+                                "text": "CII Trend Analysis",
+                                "x": -20
+                        },
+                        "subtitle":
+                        {
+                                "text": "",
+                                "x": -20
+                        },
+                        "xAxis":
+                        {
+                                "categories": [ "Dec'13","Jan'13","Feb'13","Mar'13"]
+                        },
+                        "yAxis":
+                        {
+                                "title": { "text": "CII" },
+				"plotLines": [{
+						"value": 0,
+						"width": 1,
+						"color": "#808080"
+					      }]
+                        },
+                        "legend":
+                        {
+                                "layout": "vertical",
+                                "align": "right",
+                                "verticalAlign": "top",
+                                "x": 5,
+                                "y": 60,
+                                "borderWidth": 0
+                        },
+                        "tooltip":
+                        {
+                        },
+                        "series":
+                        [
+                                {
+                                        "name": "Peter Dykes",
+                                        "data": [58.0, 66.9, 69.5, 74.5]
+                                },
+                                {
+                                        "name": "William John",
+                                        "data": [28.5, 71.5, 68.25, 64.9]
+                                },
+                                {
+                                        "name": "Steve Smith",
+                                        "data": [76.9, 73.5, 67.0, 78.6]
+                                },
+                                {
+                                        "name": "John Dykes",
+                                        "data": [63.9,71.9, 75.2, 67.0]
+                                },
+                                {
+                                        "name": "Peter Brown",
+                                        "data": [62.9, 61.9, 65.2, 58.0]
+                                },
+                                {
+                                        "name": "Thomas William",
+                                        "data": [72.9, 63.5, 91.9, 65.2]
+                                }
+                        ]                
+
+}
