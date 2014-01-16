@@ -1,0 +1,64 @@
+{
+    "reps": [
+        {
+            "name": "John Dykes",
+            "id": 1,
+            "flsmId": 1,
+            "imageUrl": "images/rep_photo.png",
+            "cii": 95.4,
+            "ytdPercent": 87,
+            "positionX":20,
+            "positionY":160,
+            "EvaluatedDocIds": [0,0,0,0,0,0,0,0],
+            "EvaluatedDocNames": ""
+        },
+        {
+            "name": "Steve Smith",
+            "id": 2,
+            "flsmId": 1,
+            "imageUrl": "images/rep_photo2.png",
+            "cii": 91.7,
+            "ytdPercent": 90,
+            "positionX":50,
+            "positionY":25,
+            "EvaluatedDocIds": [0,0,0,0,0,0,0,0],
+            "EvaluatedDocNames": ""
+        },
+        {
+            "name": "Peter Brown",
+            "id": 3,
+            "flsmId": 1,
+            "imageUrl": "images/rep_photo3.png",
+            "cii": 88.1,
+            "ytdPercent": 89,
+            "positionX":400,
+            "positionY":75,
+            "EvaluatedDocIds": [0,0,0,0,0,0,0,0],
+            "EvaluatedDocNames": ""
+        },
+        {
+            "name": "Thomas Williams",
+            "id": 4,
+            "flsmId": 1,
+            "imageUrl": "images/rep_photo4.png",
+            "cii": 85.5,
+            "ytdPercent": 86,
+            "positionX":650,
+            "positionY":20,
+            "EvaluatedDocIds": [0,0,0,0,0,0,0,0],
+            "EvaluatedDocNames": ""
+        },
+        {
+            "name": "Jonathan Mola",
+            "id": 5,
+            "flsmId": 1,
+            "imageUrl": "images/rep_photo5.png",
+            "cii": 87.5,
+            "ytdPercent": 88,
+            "positionX":700,
+            "positionY":180,
+            "EvaluatedDocIds": [0,0,0,0,0,0,0,0],
+            "EvaluatedDocNames": ""
+        }
+    ]
+}
