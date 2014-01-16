@@ -1,0 +1,17 @@
+<div ng-controller="loginController" id="base-frame" class="login_special">
+        <!--<div style="font-size: large;font-family: fantasy; color: white;float:right;"> <a ng-click="setTheme('');">Blue</a>&nbsp;&nbsp;&nbsp;<a ng-click="setTheme('orange/');">Orange</a></div>-->
+	<div class="content-frame">
+	    <div class="loginLogo" >
+		<img src="{{theme}}images/Login_Logo.png"  name="logo" /> 
+	    </div>
+            <div class="login">
+		<!--<img src="{{theme}}images/logo.png" name="logo" />-->
+                    <input type="text" name="username" id="username" value="   Username"  />
+                    <input type="text" name="password" id="password" value="   Password"  />
+                    
+                  
+		    <img src="" ng-click="loginAction()" />
+                    <!--<img src="{{theme}}" alt="login" style="" ng-click="loginAction()" />-->
+            </div>
+	</div>
+</div>
